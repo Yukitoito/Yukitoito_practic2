@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+header {
+    background: #000;
+    border-bottom: 2px solid #ff69b4;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    color: #ff69b4;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    margin-left: 0.5rem;
+}
+
+nav a:hover {
+    background: #ff69b4;
+    color: #000;
+}
+
+.admin-link {
+    background: #1a1a1a;
+    border-color: #ff69b4;
+    color: #ff69b4;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-card {
+    background: #ffe4ec;
+    padding: 1.2rem;
+    border: 1px solid #ff69b4;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+}
+
+.game-card h3 {
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.game-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+}
+
+.genre {
+    background: #ff69b4;
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.year, .platform {
+    background: #d4a0b0;
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.desc-preview {
+    color: #333;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff69b4;
+    color: #000;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff1493;
+    color: #fff;
+}
+
+.details-container {
+    background: #111;
+    border: 1px solid #ff69b4;
+    padding: 2rem;
+}
+
+.details-container h2 {
+    color: #ff69b4;
+    margin-bottom: 1rem;
+}
+
+.detail-item {
+    padding: 0.5rem;
+    background: #000;
+    margin: 0.5rem 0;
+    border-left: 3px solid #ff69b4;
+}
+
+.detail-item strong {
+    color: #ff69b4;
+    width: 120px;
+    display: inline-block;
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.admin-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-box, .list-box {
+    background: #111;
+    border: 1px solid #ff69b4;
+    padding: 1.5rem;
+}
+
+.form-box h2, .list-box h2 {
+    color: #ff69b4;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: #ff69b4;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    background: #000;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.admin-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #333;
+}
+
+.admin-item h4 {
+    color: #ff69b4;
+}
+
+.admin-item small {
+    color: #aaa;
+    font-size: 0.7rem;
+}
+
+.edit, .delete {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+.edit {
+    background: #ff69b4;
+    color: #000;
+}
+
+.delete {
+    background: #2a1a1a;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+}
+
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

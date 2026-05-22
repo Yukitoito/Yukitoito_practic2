@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ПАНЕЛЬ УПРАВЛЕНИЯ</h1>
+        <nav>
+            <a href="index.html">ГЛАВНАЯ</a>
+        </nav>
+    </header>
+    <main>
+        <div class="admin-container">
+            <div class="form-box">
+                <h2 id="formTitle">ДОБАВИТЬ ИГРУ</h2>
+                <form id="gameForm">
+                    <input type="hidden" id="gameId">
+                    <div class="form-group">
+                        <label>НАЗВАНИЕ *</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ЖАНР *</label>
+                        <input type="text" id="genre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ГОД *</label>
+                        <input type="number" id="year" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ПЛАТФОРМА *</label>
+                        <input type="text" id="platform" required>
+                    </div>
+                    <div class="form-group">
+                        <label>РАЗРАБОТЧИК</label>
+                        <input type="text" id="developer">
+                    </div>
+                    <div class="form-group">
+                        <label>ОПИСАНИЕ</label>
+                        <textarea id="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn">СОХРАНИТЬ</button>
+                        <button type="button" class="btn" id="cancelBtn">ОТМЕНА</button>
+                    </div>
+                </form>
+            </div>
+            <div class="list-box">
+                <h2>СПИСОК ИГР</h2>
+                <div id="gamesList" class="admin-list"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
